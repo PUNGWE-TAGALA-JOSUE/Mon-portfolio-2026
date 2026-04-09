@@ -17,7 +17,7 @@ body{background-color: var(--gris-tres-claire) ;
        line-height: 1.6; 
       }
 
-header{     
+header{ 
     background-color: white;
     box-shadow: 2px 6px 10px  rgba(0,0,0,0.05);
     position: :sticky;
@@ -401,3 +401,194 @@ header{
             }
             
       }
+
+
+
+
+      /* Styles pour la page Contact */
+.contact-container {
+    max-width: 1000px;
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 0 2rem;
+    justify-content: center;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact-info h2::after {
+    margin: 1rem 0; /* Aligne la barre à gauche */
+}
+
+.info-details {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--gris-tres-fonce);
+}
+
+.social-apps {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-apps a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+
+.social-apps a:first-child { background-color: #25D366; } /* WhatsApp Green */
+.social-apps a:last-child { background-color: #0088cc; } /* Telegram Blue */
+
+.social-apps a:hover {
+    opacity: 0.8;
+}
+
+/* Style du Formulaire */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--gris-tres-fonce);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: inherit;
+    outline-color: var(--violet-doux);
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--violet-fonce);
+}
+
+/* Correction de la grille pour forcer 3 colonnes sur PC */
+.grille-Projets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+/* Style spécifique pour les titres de section */
+.titre-section h1 {
+    color: var(--violet-doux);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.titre-section hr {
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    border: none;
+    border-radius: 10px;
+    margin: 0 auto 3rem auto;
+}
+
+/* Ajustement des articles */
+article {
+    background: white;
+    border-radius: 15px; /* Plus arrondi comme sur l'image */
+    overflow: hidden;
+    border: 1px solid #eef2ff;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenu-projets {
+    padding: 20px;
+    text-align: left; /* Aligné à gauche comme l'image */
+}
+
+.contenu-projets h3 {
+    color: var(--violet-doux);
+    margin-bottom: 10px;
+}
+
+/* Style des tags (bulles bleues) */
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.tags li {
+    background: #f0f0ff;
+    color: #7c74ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Liens en bas de carte */
+.liens-Projet {
+    border-top: 1px solid #f1f5f9;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.liens-Projet a {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.liens-Projet a:hover {
+    color: var(--violet-doux);
+}
+
+/* État "Bientôt" */
+.bientot {
+    color: #94a3b8 !important;
+    font-size: 0.9rem;
+}
