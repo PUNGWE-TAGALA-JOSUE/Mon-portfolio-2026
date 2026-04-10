@@ -427,11 +427,15 @@ header{
 
 .contact-info h2 {
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem 0 auto;
 }
 
-.contact-info h2::after {
-    margin: 1rem 0; /* Aligne la barre à gauche */
+
+
+
+.contact-info h2{
+      text-align: center;
+      margin: 1rem;
 }
 
 .info-details {
@@ -586,9 +590,187 @@ article {
 .liens-Projet a:hover {
     color: var(--violet-doux);
 }
-
+n
 /* État "Bientôt" */
 .bientot {
     color: #94a3b8 !important;
     font-size: 0.9rem;
+}
+
+/* --- Page Passions --- */
+
+.sous-titre {
+    text-align: center;
+    color: var(--gris-fonce);
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+    font-style: italic;
+}
+
+.passion-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+
+.passion-card {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.passion-card:hover {
+    transform: scale(1.02);
+}
+
+/* Inversion pour une ligne sur deux */
+.passion-card.reversed {
+     flex: 1;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.passion-image {
+    flex: 1;
+    height: 400px;
+}
+
+.passion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.passion-info {
+    flex: 1;
+    padding: 3rem;
+}
+
+.passion-category {
+    background-color: #eef2ff;
+    color: var(--violet-doux);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.passion-info h3 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.passion-info p {
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* --- Responsive Passions --- */
+@media (max-width: 768px) {
+    .passion-card, .passion-card.reversed {
+        flex-direction: column;
+    }
+    
+    .passion-image {
+        height: 250px;
+        width: 100%;
+    }
+    
+    .passion-info {
+        padding: 2rem;
+    }
+}
+
+/* --- Page Divertissement --- */
+
+.divertissement-section {
+    margin-bottom: 4rem;
+}
+
+.divertissement-section h2 {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.divertissement-section h2::after {
+    display: none; /* On enlève la barre ici pour ce style */
+}
+
+.grille-divertissement {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item-divertissement {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    position: relative;
+}
+
+.item-divertissement:hover {
+    transform: translateY(-5px);
+}
+
+.item-divertissement img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.item-desc {
+    padding: 15px;
+}
+
+.item-desc h4 {
+    color: var(--violet-doux);
+    margin-bottom: 5px;
+}
+
+/* Section Citation Spéciale */
+.quote-container {
+    background: linear-gradient(135deg, var(--violet-doux), var(--violet-fonce));
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.quote-box p {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.quote-box span {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .grille-divertissement {
+        grid-template-columns: 1fr;
+    }
 }
